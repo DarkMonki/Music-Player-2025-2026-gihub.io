@@ -56,7 +56,7 @@ imageWidth[2] = 900;
 imageHeight[2] = 599;
 //Aspect Ratio
 //
-float imageAspectRatio_GreaterOne = ( imageWidth[i] >= imageHeight[i] ) ? float(imageWidth[i])/float(imageHeight[i]) : float(imageHeight[i])/float(imageWidth[i]) ; //Ternary Operator
+float imageAspectRatio_GreaterOne = ( imageWidth[i] >= imageHeight[i] ) ? float(imageWidth[i])/float(imageHeight[i]) : float(imageHeight[i])/float(imageWidth[i]) ;
 //
 //println("Testing for Decimals, formula unsing ints:", imageWidth[i]/imageHeight[i]);
 println("After casting added, Aspect Ratio >1:", imageAspectRatio_GreaterOne);
@@ -65,7 +65,7 @@ println("After casting added, Aspect Ratio >1:", imageAspectRatio_GreaterOne);
 float[] imageWidthAdjusted = new float[numberOfImages];
 float[] imageHeightAdjusted = new float[numberOfImages];
 imageWidthAdjusted[i] = imageDivWidth;
-imageHeightAdjusted[i] = ( imageWidth[i] >= imageDivWidth ) ? imageWidthAdjusted[i]/imageAspectRatio_GreaterOne : imageWidthAdjusted[i]*imageAspectRatio_GreaterOne ; //Ternary Operator
+imageHeightAdjusted[i] = ( imageWidth[i] >= imageDivWidth ) ? imageWidthAdjusted[i]/imageAspectRatio_GreaterOne : imageWidthAdjusted[i]*imageAspectRatio_GreaterOne ;
 //
 if ( imageHeightAdjusted[i] > imageDivHeight ) {
   //println("Image doesn't fit, program ended ... Fatal Flaw, must be solved ... Image doesn't show.");
@@ -79,7 +79,7 @@ if ( imageHeightAdjusted[i] > imageDivHeight ) {
     } else {
       //ERROR: Infinite Loop
       println("ERROR: infinite loop, Image Percent WHILE, value:", indexWhile);
-      exit(); 
+      exit();
       imageHeightAdjusted[i]=imageDivHeight;
     } //End Check Infinite loop
     imageWidthAdjusted[i] *= 0.99; // -= 1
