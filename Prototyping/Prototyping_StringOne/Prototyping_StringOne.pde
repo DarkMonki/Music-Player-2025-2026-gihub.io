@@ -1,6 +1,3 @@
-  /* String
- */
-//
 //Display
 fullScreen();
 //size(500, 100);
@@ -67,7 +64,7 @@ for ( 1=1; 1<=3; 1++ ) {
 while ( textWidth( title ) > stringDivWidth ) { 
   //ERROR: infinite loop, requires exit() & println()
   fontSize *= constarantDecrease; //fontSize = fontSize*0.99;
-  textFont(titleFont, fontSize);
+  textFont( titleFont, fontSize );
 }
 //
 text(title, stringDivX, stringDivY, stringDivWidth, stringDivHeight);
