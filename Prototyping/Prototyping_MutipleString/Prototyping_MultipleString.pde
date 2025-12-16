@@ -9,22 +9,19 @@ float[] stringDivX = new float[numberOfDIVs];
 float[] stringDivY = new float[numberOfDIVs];
 float[] stringDivWidth = new float[numberOfDIVs];
 float[] stringDivHeight = new float[numberOfDIVs];
-stringDivX[0] = appWidth*1/10;
-stringDivY[0] = appHeight*1/10;
-stringDivWidth[0] = appWidth*1/2;
-stringDivHeight[0] = appHeight*1/10; //Make smaller to test height
-stringDivX[1] = stringDivX[0];
-stringDivY[1] = appHeight*3/10;
-stringDivWidth[1] = appWidth*2/3;
-stringDivHeight[1] = stringDivHeight[0];
-stringDivX[2] = stringDivX[0];
-stringDivY[2] = appHeight*5/10;
-stringDivWidth[2] = appWidth*6/7;
-stringDivHeight[2] = stringDivHeight[0];
+stringDivX[0] = appWidth*6.8/22.5;
+stringDivY[0] = appHeight*6.9/12.5;
+stringDivWidth[0] = appWidth*4.5/22.5;
+stringDivHeight[0] = appHeight*1/12.5;
+stringDivX[1] = appWidth*11.5/22.5;
+stringDivY[1] = appHeight*6.9/12.5;
+stringDivWidth[1] = appWidth*4.5/22.5;
+stringDivHeight[1] = appHeight*1/12.5;
+
 //
 String[] text = new String[numberOfDIVs];
-text[0] = "I hate Banana, I hate Banana,";
-text[1] = "I hate Banana, I hate Banana, I hate Banana,";
+text[0] = "Title,";
+text[1] = "Albumartist";
 text[2] = "I hate Banana, I hate Banana, I hate Banana, I hate Banana,";
 //
 float[] fontSize = new float[numberOfDIVs];
@@ -36,7 +33,7 @@ PFont[] drawFont = new PFont[numberOfDIVs];
 //
 float[] aspectRatio = new float[numberOfDIVs];
 /* Font Data Structure Legend
- 0: Corbel
+ 0: corbel
  1: arial
  2: impact
 */

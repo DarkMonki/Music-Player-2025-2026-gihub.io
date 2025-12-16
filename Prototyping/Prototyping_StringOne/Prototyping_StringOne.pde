@@ -16,17 +16,17 @@ String title = "I hate Banana";
 //
 float fontSize = appHeight;
 PFont titleFont;
-String harrington = "Impact";
+String corbel = "Corbel";
 //
-titleFont = createFont(harrington, fontSize);
+titleFont = createFont(corbel, fontSize);
 //
-//println("Font Size:", fontSize, "\tFont Spelling:", harrington, "\tFont Variable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
+//println("Font Size:", fontSize, "\tFont Spelling:", corbel, "\tFont Variable Confirmation:", titleFont); //Inspect PFont-type Varaible for Harddrive Address v value
 //
-float fontSizeHarrington = 83.0;
-float divHeightHarrington = stringDivHeight;
-float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington;
-fontSize = stringDivHeight*harringtonAspectRatio;
-//println("Impact Aspect Ratio:", impactAspectRatio, "@ Font Size:", fontSize);
+float fontSizeCorbel = 80.0;
+float divHeightCorbel = stringDivHeight;
+float corbelAspectRatio = fontSizeCorbel / divHeightCorbel;
+fontSize = stringDivHeight*corbelAspectRatio;
+//println("Corbel Aspect Ratio:", corbelAspectRatio, "@ Font Size:", fontSize);
 //
 rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
 //
@@ -36,7 +36,7 @@ color whiteInk = #FFFFFF; //Grey Scale is 255
 color resetInk = whiteInk;
 fill(blackInk);
 //Grey Scale 0-255
-textAlign (LEFT, CENTER);
+textAlign (CENTER, CENTER);
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 //
 textFont(titleFont, fontSize);
