@@ -97,7 +97,6 @@ float moredot3X = appWidth * 21.7/22.5;
 float moredot3Y = appHeight * 10.43/12.5;
 float moredot3Width = appWidth * 0.5/22.5;
 float moredot3Height = appHeight * 0.5/12.5;
-//
 rect(moredot3X, moredot3Y, moredot3Width, moredot3Height);
 //
 float shareX = appWidth * 20.1/22.5;
@@ -136,7 +135,6 @@ float albumartistWidth = appWidth * 4.5/22.5;
 float albumartistHeight = appHeight * 1/12.5;
 rect(albumartistX, albumartistY, albumartistWidth, albumartistHeight);
 //
-
 // All the symbols/shapes
 
 float playX1 = imageWidth * 1/4;

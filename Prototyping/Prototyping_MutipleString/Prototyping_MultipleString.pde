@@ -4,44 +4,55 @@ int appWidth = displayWidth; //width
 int appHeight = displayHeight; //height
 //
 //Population
-int numberOfDIVs = 3;
+int numberOfDIVs = 4;
 float[] stringDivX = new float[numberOfDIVs];
 float[] stringDivY = new float[numberOfDIVs];
 float[] stringDivWidth = new float[numberOfDIVs];
 float[] stringDivHeight = new float[numberOfDIVs];
-stringDivX[0] = appWidth*6.8/22.5;
-stringDivY[0] = appHeight*6.9/12.5;
-stringDivWidth[0] = appWidth*4.5/22.5;
-stringDivHeight[0] = appHeight*1/12.5;
-stringDivX[1] = appWidth*11.5/22.5;
-stringDivY[1] = appHeight*6.9/12.5;
-stringDivWidth[1] = appWidth*4.5/22.5;
-stringDivHeight[1] = appHeight*1/12.5;
-
+stringDivX[0] = appWidth*5.5/22.5;
+stringDivY[0] = appHeight*8.25/12.5;
+stringDivWidth[0] = appWidth*1.3/22.5;
+stringDivHeight[0] = appHeight*0.6/12.5;
+stringDivX[1] = appWidth*15.9/22.5;
+stringDivY[1] = appHeight*8.25/12.5;
+stringDivWidth[1] = appWidth*1.3/22.5;
+stringDivHeight[1] = appHeight*0.6/12.5;
+stringDivX[2] = appWidth*6.8/22.5;
+stringDivY[2] = appHeight*6.9/12.5;
+stringDivWidth[2] = appWidth*4.5/22.5;
+stringDivHeight[2] = appHeight*1/12.5;
+stringDivX[3] = appWidth*11.3/22.5;
+stringDivY[3] = appHeight*6.9/12.5;
+stringDivWidth[3] = appWidth*4.5/22.5;
+stringDivHeight[3] = appHeight*1/12.5;
 //
 String[] text = new String[numberOfDIVs];
-text[0] = "Title,";
-text[1] = "Albumartist";
-text[2] = "I hate Banana, I hate Banana, I hate Banana, I hate Banana,";
+text[0] = "SongTime";
+text[1] = "SongEnd";
+text[2] = "Titlename";
+text[3] = "Artistname";
 //
 float[] fontSize = new float[numberOfDIVs];
 String[] font = new String[numberOfDIVs];
 font[0] = "Corbel";
-font[1] = "Arial Italic";
-font[2] = "Impact";
+font[1] = "Corbel";
+font[2] = "Corbel";
+font[3] = "Corbel";
 PFont[] drawFont = new PFont[numberOfDIVs];
 //
 float[] aspectRatio = new float[numberOfDIVs];
 /* Font Data Structure Legend
  0: corbel
- 1: arial
- 2: impact
+ 1: corbel
+ 2: corbel
+ 3: corbel
 */
 int denominator = 120;
 int[] testedSize = new int[numberOfDIVs];
-testedSize[0] = 141; 
-testedSize[1] = 141;
-testedSize[2] = 141; 
+testedSize[0] = 100; 
+testedSize[1] = 100;
+testedSize[2] = 909; 
+testedSize[3] = 909; 
 for (int i=0; i<numberOfDIVs; i++) {
   aspectRatio[i] = float(testedSize[i]) / float(denominator);
   fontSize[i] = aspectRatio[i]*10;
@@ -50,14 +61,14 @@ for (int i=0; i<numberOfDIVs; i++) {
 //
 for ( int i=0; i<numberOfDIVs; i++ ) {
   rect( stringDivX[i], stringDivY[i], stringDivWidth[i], stringDivHeight[i] );
-} //End FOR DIVs
+} //End For DIVs
 //
 //Drawing Text
-color blackInk = #000000;
-color whiteInk = #FFFFFF; //Grey Scale is 255
+color midnightpurpleInk = #1C0D2C;
+color whiteInk = #FFFFFF; //Grey Scale is 0-255
 color resetInk = whiteInk;
-fill(blackInk);
-textAlign (LEFT, CENTER);
+fill(midnightpurpleInk);
+textAlign (CENTER, CENTER);
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 float constantDecrease = 0.99;
 int iWhile=0;
