@@ -16,8 +16,8 @@ color quitBackground, quitBackgroundActivated;
 //
 void setup() {
   //Display
-  size(500, 400);
-  //fullScreen();
+  //size(500, 400);
+  fullScreen();
   appWidth = width;
   appHeight = height;
   //
@@ -97,7 +97,7 @@ void draw() {
 void mousePressed() {
   //Music Play Functions
   if ( playButton == true ) {
-    println("Press again you hate banana");
+    println("Press again if you hate BANANAS");
     playButton=false;
   } else {
     println(" ");
