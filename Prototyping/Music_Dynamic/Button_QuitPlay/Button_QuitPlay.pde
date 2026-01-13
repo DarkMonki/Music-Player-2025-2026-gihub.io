@@ -97,7 +97,7 @@ void draw() {
 void mousePressed() {
   //Music Play Functions
   if ( playButton == true ) {
-    println("Play My Song");
+    println("Press again you hate banana");
     playButton=false;
   } else {
     println(" ");
