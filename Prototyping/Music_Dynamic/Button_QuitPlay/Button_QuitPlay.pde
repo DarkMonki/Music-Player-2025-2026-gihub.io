@@ -1,15 +1,4 @@
-/* Creating Buttons
- - Understanding how the mixing of boilerplate happens
- - Introducing Booleans to communicate between procedures, 1 bite of information
- 
- - Specific Debugging Topics
- - draw() varaibles initiated in Global Varaibles due to LOOP
- - MouseX & Y keyVariables
- 
- - What to copy and paste
- - Quit & Play DIV
- 
- */
+
 //
 //Library - Minim
 //
@@ -18,6 +7,12 @@ int appWidth, appHeight;
 float quitDivX, quitDivY, quitDivWidth, quitDivHeight;
 float playDivX, playDivY, playDivWidth, playDivHeight;
 float playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3;
+//
+Boolean playButton=false;
+//
+color resetBackground, resetInk;
+color playColourBackground, playColourSymbol, playColourBackgroundActivated, playColourSymbolActivated;
+color quitBackground, quitBackgroundActivated;
 //
 void setup() {
   //Display
@@ -45,26 +40,71 @@ void setup() {
   rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
   rect(playDivX, playDivY, playDivWidth, playDivHeight);
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+  //
+  //Colour Population
+  color black = 0; //Gray Scale, 256 bits
+  color white = 255;
+  //CANVAS
+  resetBackground = white;
+  resetInk = black;
+  //Button Colours
+  color red = #CD0000;
+  color darkblue = #0B165A;
+  color brown = #5D3501;
+  color grayScale = 256/2;
+  color gray = #B9B9B9;
+  playColourBackground = darkblue;
+  playColourSymbol = brown;
+  playColourBackgroundActivated = brown;
+  playColourSymbolActivated = darkblue;
+  quitBackground = white;
+  quitBackgroundActivated = red;
+    //
 } //End setup
 //
 void draw() {
-  //println ("My Mouse is", mouseX, mouseY);
+  //println ("Where am I", mouseX, mouseY);
+  //Button HoverOver
   if ( mouseX>playDivX && mouseX<playDivX+playDivWidth && mouseY>playDivY && mouseY<playDivY+playDivHeight ) {
-    println("I hate BANANA");
+    //println("Correct");
     playButton = true;
+    fill(playColourBackgroundActivated);
+    rect(playDivX, playDivY, playDivWidth, playDivHeight);
+    fill(playColourSymbolActivated);
+    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+    fill(resetBackground);
   } else {
     //print(" ");
-  }
+    playButton = false;
+    fill(playColourBackground);
+    rect(playDivX, playDivY, playDivWidth, playDivHeight);
+    fill(playColourSymbol);
+    triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+    fill(resetBackground);
+  }//End Play Button
+  if ( mouseX>quitDivX && mouseX<quitDivX+quitDivWidth && mouseY>quitDivY &&mouseY<quitDivY+quitDivHeight ) {
+    fill(quitBackgroundActivated);
+    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+    fill(resetBackground);
+  } else {
+    fill(quitBackground);
+    rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+    fill(resetBackground);
+  }//End Quit Button
+  //
 } //End draw
 //
 void mousePressed() {
-  if ( playButton = true ) {
-    println("Play my song");
+  //Music Play Functions
+  if ( playButton == true ) {
+    println("Play My Song");
+    playButton=false;
   } else {
     println(" ");
-  } //End Mouse Pressed
-  //
-  void keyPressed() {
-  } //End Key Pressed
-  //
-  //End MAIN Program
+  }
+} //End Mouse Pressed
+//
+void keyPressed() {
+} //End Key Pressed
+//
+//End MAIN Program
