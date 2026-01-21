@@ -1,14 +1,12 @@
-//*
+
+//
 //size(); //width //height
 fullScreen(); //displayWidth //displayHeight
 int appWidth = displayWidth;
 int appHeight = displayHeight;
 //rect(x, y, width, height)
-//Note: the debuggger expects rectangles to have float or double type variables
-//Using Ratios
 
 // All the rectangles
-
 float exitX = appWidth * 0.2/22.5;
 float exitY = appHeight * 0.2/12.5;
 float exitWidth = appWidth * 1/22.5;
@@ -136,36 +134,29 @@ float albumartistHeight = appHeight * 1/12.5;
 rect(albumartistX, albumartistY, albumartistWidth, albumartistHeight);
 //
 // All the symbols/shapes
-
-float playX1 = imageWidth * 1/4;
-float playY1 = imageHeight * 1/4;
-float playX2 = imageWidth * 3/4;
-float playY2 = imageHeight * 1/2;
-float playX3 = imageWidth * 1/4;
-float playY3 = imageHeight * 3/4;
-triangle(playX1, playY1, playX2, playY2, playX3, playY3);
+float playSymbolX1 = playX + playWidth * 1/4;
+float playSymbolY1 = playY + playHeight * 1/4;
+float playSymbolX2 = playSymbolX1 + playWidth * 1/2;
+float playSymbolY2 = playY + playHeight * 1/2;
+float playSymbolX3 = playSymbolX1;
+float playSymbolY3 = playY + playHeight * 3/4;
+triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
 //
-float skiprightX1 = imageWidth * 1/4;
-float skiprightY1 = imageHeight * 1/4;
-float skiprightX2 = imageWidth * 1/2;
-float skiprightY2 = imageHeight * 1/2;
-float skiprightX3 = imageWidth * 1/4;
-float skiprightY3 = imageHeight * 3/4;
-triangle(skiprightX1, skiprightY1, skiprightX2, skiprightY2, skiprightX3, skiprightY3);
+float skiprightSymbolX1 = skiprightX + skiprightWidth * 1/4;
+float skiprightSymbolY1 = skiprightY + skiprightHeight * 1/4;
+float skiprightSymbolX2 = skiprightSymbolX1 + skiprightWidth * 1/2;
+float skiprightSymbolY2 = skiprightY + skiprightHeight * 1/2;
+float skiprightSymbolX3 = skiprightSymbolX1;
+float skiprightSymbolY3 = skiprightY + skiprightHeight * 3/4;
+triangle(skiprightSymbolX1, skiprightSymbolY1, skiprightSymbolX2, skiprightSymbolY2, skiprightSymbolX3, skiprightSymbolY3);
 //
-float skipleftX1 = imageWidth * 3/4;
-float skipleftY1 = imageHeight * 1/4;
-float skipleftX2 = imageWidth * 1/2;
-float skipleftY2 = imageHeight * 1/2;
-float skipleftX3 = imageWidth * 3/4;
-float skipleftY3 = imageHeight * 3/4;
-triangle(skipleftX1, skipleftY1, skipleftX2, skipleftY2, skipleftX3, skipleftY3);
-//
-float stopbuttonX = imageWidth * 1/4;
-float stopbuttonY = imageHeight * 2/4;
-float stopbuttonDimension = imageWidth * 1/2;
-square(stopbuttonX, stopbuttonY, stopbuttonDimension);
-//
+float skipleftSymbolX1 = skipleftX + skipleftWidth * 1/4;
+float skipleftSymbolY1 = skipleftY + skipleftHeight * 1/4;
+float skipleftSymbolX2 = skipleftSymbolX1 + skipleftWidth * 1/2;
+float skipleftSymbolY2 = skipleftY + skipleftHeight * 1/2;
+float skipleftSymbolX3 = skipleftSymbolX1;
+float skipleftSymbolY3 = skipleftY + skipleftHeight * 3/4;
+triangle(skipleftSymbolX1, skipleftSymbolY1, skipleftSymbolX2, skipleftSymbolY2, skipleftSymbolX3, skipleftSymbolY3);
 // already in your code
 //rect(nameX, nameY, nameWidth, nameHeight);
 //square(nameX, nameY, nameDimension);
