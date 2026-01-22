@@ -5,6 +5,7 @@ fullScreen(); //displayWidth //displayHeight
 int appWidth = displayWidth;
 int appHeight = displayHeight;
 //rect(x, y, width, height)
+//
 
 // All the rectangles
 float exitX = appWidth * 0.2/22.5;
@@ -133,6 +134,7 @@ float albumartistWidth = appWidth * 4.5/22.5;
 float albumartistHeight = appHeight * 1/12.5;
 rect(albumartistX, albumartistY, albumartistWidth, albumartistHeight);
 //
+
 // All the symbols/shapes
 float playSymbolX1 = playX + playWidth * 1/4;
 float playSymbolY1 = playY + playHeight * 1/4;
@@ -142,20 +144,25 @@ float playSymbolX3 = playSymbolX1;
 float playSymbolY3 = playY + playHeight * 3/4;
 triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
 //
-float skiprightSymbolX1 = skiprightX + skiprightWidth * 1/4;
+float skiprightSymbolX1 = skiprightX + skiprightWidth * 1/5;
 float skiprightSymbolY1 = skiprightY + skiprightHeight * 1/4;
 float skiprightSymbolX2 = skiprightSymbolX1 + skiprightWidth * 1/2;
 float skiprightSymbolY2 = skiprightY + skiprightHeight * 1/2;
 float skiprightSymbolX3 = skiprightSymbolX1;
 float skiprightSymbolY3 = skiprightY + skiprightHeight * 3/4;
 triangle(skiprightSymbolX1, skiprightSymbolY1, skiprightSymbolX2, skiprightSymbolY2, skiprightSymbolX3, skiprightSymbolY3);
+float skiprightSymbolX = appWidth * 13.5/22.5;
+float skiprightSymbolY = appHeight * 9.6/12.5;
+float skiprightSymbolWidth = skiprightWidth * 1/5;
+float skiprightSymbolHeight = skiprightHeight * 3/5;
+rect(skiprightSymbolX, skiprightSymbolY, skiprightSymbolWidth, skiprightSymbolHeight);
 //
-float skipleftSymbolX1 = skipleftX + skipleftWidth * 1/4;
-float skipleftSymbolY1 = skipleftY + skipleftHeight * 1/4;
-float skipleftSymbolX2 = skipleftSymbolX1 + skipleftWidth * 1/2;
-float skipleftSymbolY2 = skipleftY + skipleftHeight * 1/2;
+float skipleftSymbolX1 = skipleftX + skipleftWidth * ;
+float skipleftSymbolY1 = skipleftY + skipleftHeight * ;
+float skipleftSymbolX2 = skipleftSymbolX1 + skipleftWidth * ;
+float skipleftSymbolY2 = skipleftY + skipleftHeight * ;
 float skipleftSymbolX3 = skipleftSymbolX1;
-float skipleftSymbolY3 = skipleftY + skipleftHeight * 3/4;
+float skipleftSymbolY3 = skipleftY + skipleftHeight * ;
 triangle(skipleftSymbolX1, skipleftSymbolY1, skipleftSymbolX2, skipleftSymbolY2, skipleftSymbolX3, skipleftSymbolY3);
 // already in your code
 //rect(nameX, nameY, nameWidth, nameHeight);

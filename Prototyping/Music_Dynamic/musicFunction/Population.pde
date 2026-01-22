@@ -1,5 +1,9 @@
 
 //
+//Global Varaibles
+float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
+color resetBlackink, resetWhiteInk,  purpleInk;
+//
 void divPopulation() {
   quitDivX = appWidth * 9/10;
   quitDivY = appHeight * 0/10;
@@ -15,6 +19,11 @@ void divPopulation() {
   playSymbolY2 = playDivY + playDivHeight * 1/2;
   playSymbolX3 = playSymbolX1;
   playSymbolY3 = playDivY + playDivHeight * 3/4;
+  //
+  stringDivX = appWidth*70/279;
+  stringDivY = appHeight*22/216;
+  stringDivWidth = appWidth*140/279;
+  stringDivHeight = appHeight*22/216;
 } //End DIV Population
 //
 void colourPopulation() {
