@@ -1,9 +1,5 @@
 
 //
-//Global Varaibles
-float stringDivX, stringDivY, stringDivWidth, stringDivHeight;
-color resetBlackink, resetWhiteInk,  purpleInk;
-//
 void divPopulation() {
   quitDivX = appWidth * 9/10;
   quitDivY = appHeight * 0/10;
@@ -28,22 +24,24 @@ void divPopulation() {
 //
 void colourPopulation() {
   color black = 0; //Gray Scale, 256 bits
-  color white = 255;
-  color grayScale = 256/2;
-  color gray = #B9B9B9;
+  color white = 255; 
+  color grayScale = 256/2; 
+  color gray = #B9B9B9; 
   //
   resetBackgroundDay = white;
   resetInkDay = black;
   resetBackgroundNight = 256/4;
-  resetInkNight = int(256*0.75); // 3/4 of origoinal, not 1/4
+  resetInkNight = int(256*0.75); // 3/4 of original, not 1/4
   //println("Casting answer is:", resetInkNight); //Exactly 192, no rounding invovled, checked on calculator
   //
   color red = #CD0000;
-  color darkblue = #0B165A;
+  color darkblue = #0B165A; //human name for hexidecimal code
   color brown = #5D3501;
+  color blue = #4A05F0; //Day Mode Ink
   color darkGray = grayScale;
   color ligthGray = gray;
-  //
+  //Note: able to use a Ternary Operator but ineffiecient
+  //println("Night Mode Boolean", nightMode);
   if ( nightMode == true ) {
     resetBackground = resetBackgroundNight;
     resetInk = resetInkNight;
@@ -54,6 +52,7 @@ void colourPopulation() {
     quitBackground = ligthGray;
     quitBackgroundActivated = red;
     quitButtonInk = darkGray;
+    titleInk = darkGray;
   } else
   {
     //Previously the Day Colour Assignments
@@ -62,11 +61,13 @@ void colourPopulation() {
     playColourBackground = darkblue;
     playColourSymbol = brown;
     playColourBackgroundActivated = brown;
-    playColourSymbolActivated = darkblue;
+    playColourSymbolActivated = blue;
     quitBackground = white;
     quitBackgroundActivated = red;
     quitButtonInk = black;
+    titleInk = blue;
   } //End Night Mode Colors
+  //
 } //End Colour Population
 //
 // End Subprogram Population

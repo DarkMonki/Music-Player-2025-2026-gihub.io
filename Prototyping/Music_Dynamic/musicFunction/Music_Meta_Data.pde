@@ -18,14 +18,17 @@
  Publisher: meta.publisher()
  Encoded: meta.encoded()
  */
-//Global Variable
-AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
+//
+void metaDataFileLoading() { //playList[ currentSong ] = minim.loadFile( file )
+  playListMetaData[ currentSong ] = playList[ currentSong ].getMetaData();
+} //End Meta Data File Loading
 //
 void testMetaData() {
-  //
+  //Print What is available on a particular song
   println();
   println( "File Name: " + playListMetaData[currentSong].fileName() );
   println( "Length (in milliseconds): " + playListMetaData[currentSong].length() );
+  println( "Length (in seconds): " + ( playListMetaData[currentSong].length() )/1000 );
   println( "Title: " + playListMetaData[currentSong].title() );
   println( "Author: " + playListMetaData[currentSong].author() );
   println( "Album: " + playListMetaData[currentSong].album() );
@@ -42,4 +45,15 @@ void testMetaData() {
   println( "Encoded: " + playListMetaData[currentSong].encoded() );
 } //End Test Meta Data
 //
+void saveSongTitle() {
+  //
+  if ( playList[currentSong].isPlaying() == true) {
+    //titleDIV();
+    songTitle = playListMetaData[currentSong].title();
+    //println("Check VAR currentSongFileName", currentSongFileName);
+  } else {
+    //titleDIV();
+    songTitle = "I Hate Bananas!";
+  }
+} //End Print Song Title in draw()
 //End Subprogram Music Meta Data

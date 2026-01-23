@@ -1,67 +1,68 @@
 
 //
 void quitButton() {
-  noLoop();
-  exit();
+  noLoop(); 
+  exit(); 
   println("Final Line of mousePressed and finishes draw()");
 }//End Quit Button
 //
 void DIVs() {
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
+  quitDIV();
+  playDIV();
+  titleDIV();
 } //End DIVs
 //
-void musicButtonShapes() {
+void quitDIV() {
+  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
+} // End Quit Button DIV
+//
+void playDIV() {
+  rect(playDivX, playDivY, playDivWidth, playDivHeight);
+} // End Plauy Button DIV
+//
+void titleDIV() {
+  rect( stringDivX, stringDivY, stringDivWidth, stringDivHeight );
+} //End Title DIV
+//
+void playButtonSymbol() {
   triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
+} //End Play Button Symbol
+//
+void musicButtonShapes() {
+  playButtonSymbol();
 } // End Msuic Button Shapes
 //
 void quitButtonActive() {
   fill(quitBackgroundActivated);
-  //
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  //
+  quitDIV();
   fill(resetBackground);
   fill(quitButtonInk);
-  //
-  text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
-  //
+  easyTextQuitButton();
   fill(resetInk);
 } //End Quit Button Active
 //
 void quitButtonRegular() {
   fill(quitBackground);
-  //
-  rect(quitDivX, quitDivY, quitDivWidth, quitDivHeight);
-  //
+  quitDIV();
   fill(resetBackground);
   fill(quitButtonInk);
-  //
-  text("X", quitDivX+quitDivWidth*1/2, quitDivY+quitDivHeight*3/5);
-  //
+  easyTextQuitButton();
   fill(resetInk);
 } //End Quit Button Active
 //
 void playButtonActive() {
   fill(playColourBackgroundActivated);
-  //
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
-  //
+  playDIV();
   fill(playColourSymbolActivated);
-  //
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-  //
+  playButtonSymbol();
   fill(resetBackground);
 } // End Play Button Active
 //
 void playButtonReady() {
   fill(playColourBackground);
-  //
-  rect(playDivX, playDivY, playDivWidth, playDivHeight);
-  //
+  playDIV();
   fill(playColourSymbol);
-  //
-  triangle(playSymbolX1, playSymbolY1, playSymbolX2, playSymbolY2, playSymbolX3, playSymbolY3);
-  //
+  playButtonSymbol();
   fill(resetBackground);
 } // End Play Button Ready
 //
