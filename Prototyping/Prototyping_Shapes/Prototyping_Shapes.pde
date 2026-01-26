@@ -151,19 +151,17 @@ float skiprightSymbolY2 = skiprightY + skiprightHeight * 1/2;
 float skiprightSymbolX3 = skiprightSymbolX1;
 float skiprightSymbolY3 = skiprightY + skiprightHeight * 3/4;
 triangle(skiprightSymbolX1, skiprightSymbolY1, skiprightSymbolX2, skiprightSymbolY2, skiprightSymbolX3, skiprightSymbolY3);
-float skiprightSymbolX = appWidth * 13.5/22.5;
+float skiprightSymbolX = skiprightX * 13.5/22.5;
 float skiprightSymbolY = appHeight * 9.6/12.5;
-float skiprightSymbolWidth = skiprightWidth * 1/5;
-float skiprightSymbolHeight = skiprightHeight * 3/5;
+float skiprightSymbolWidth = skiprightWidth * 4.3/22.5;
+float skiprightSymbolHeight = skiprightHeight * 7.2/12.5;
 rect(skiprightSymbolX, skiprightSymbolY, skiprightSymbolWidth, skiprightSymbolHeight);
 //
-float skipleftSymbolX1 = skipleftX + skipleftWidth * ;
-float skipleftSymbolY1 = skipleftY + skipleftHeight * ;
-float skipleftSymbolX2 = skipleftSymbolX1 + skipleftWidth * ;
-float skipleftSymbolY2 = skipleftY + skipleftHeight * ;
-float skipleftSymbolX3 = skipleftSymbolX1;
-float skipleftSymbolY3 = skipleftY + skipleftHeight * ;
-triangle(skipleftSymbolX1, skipleftSymbolY1, skipleftSymbolX2, skipleftSymbolY2, skipleftSymbolX3, skipleftSymbolY3);
+float playlistsymbolX1 = playlistX * 2/5;
+float playlistsymbolY1 = playlistY * 1/1;
+float playlistsymbolX2 = playlistWidth * 1/1;
+float playlistsymbolY2 = playlistHeight * 1/1;
+line(playlistsymbolX1, playlistsymbolY1, playlistsymbolX2, playlistsymbolY2);
 // already in your code
 //rect(nameX, nameY, nameWidth, nameHeight);
 //square(nameX, nameY, nameDimension);
