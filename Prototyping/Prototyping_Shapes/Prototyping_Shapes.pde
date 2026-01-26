@@ -157,11 +157,6 @@ float skiprightSymbolWidth = skiprightWidth * 4.3/22.5;
 float skiprightSymbolHeight = skiprightHeight * 7.2/12.5;
 rect(skiprightSymbolX, skiprightSymbolY, skiprightSymbolWidth, skiprightSymbolHeight);
 //
-float playlistsymbolX1 = playlistX * 2/5;
-float playlistsymbolY1 = playlistY * 1/1;
-float playlistsymbolX2 = playlistWidth * 1/1;
-float playlistsymbolY2 = playlistHeight * 1/1;
-line(playlistsymbolX1, playlistsymbolY1, playlistsymbolX2, playlistsymbolY2);
 // already in your code
 //rect(nameX, nameY, nameWidth, nameHeight);
 //square(nameX, nameY, nameDimension);
